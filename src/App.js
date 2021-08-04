@@ -44,6 +44,7 @@ function App() {
 
     return (
         <div className="wrapper">
+            <div className="content">
             <ul className="time">
                 <li className="time__elem">{("0" + Math.floor(((time / 3600000) % 60))).slice(-2)}</li>
                 <li className="time__elem">{("0" + Math.floor(((time / 60000) % 60))).slice(-2)}</li>
@@ -59,6 +60,7 @@ function App() {
                         <button className="buttons__btn buttons__btn--yellow" onClick={onDoubleClick}>wait</button>
                         <button className="buttons__btn buttons__btn--grey" onClick={onResetClick}>Reset</button>
             </div>
+        </div>
         </div>
     )
 }
