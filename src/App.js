@@ -29,6 +29,11 @@ function App() {
       setTime(0)
     };
 
+    const onResetClick =() => {
+      setTimerOn(true);
+        setTime(0)
+    };
+
   const onDoubleClick = () => {
     setArrDate(Date.now());
       const diff = Date.now() - arrDate;
@@ -52,7 +57,7 @@ function App() {
                     <button className="buttons__btn buttons__btn--red" onClick={onStopClick}>Stop</button>
                 )}
                         <button className="buttons__btn buttons__btn--yellow" onClick={onDoubleClick}>wait</button>
-                        <button className="buttons__btn buttons__btn--grey" onClick={() => setTime(0)}>Reset</button>
+                        <button className="buttons__btn buttons__btn--grey" onClick={onResetClick}>Reset</button>
             </div>
         </div>
     )
